@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="src/js/controller.js"></script>
+    <title>TaskFlow</title>
+</head>
+<body>
+    <div class="notification">
+        <span class="notification__message">Task created successfully</span>
+    </div>
+    <main class="main__grid">
+        <section class="create">
+            <h2 class="big__title">Create a task</h2>
+            <form action="#" class="create__form">
+                <div class="create__form__group">
+                    <div class="create__form__container__label">
+                        <label for="title" class="create__form__label">Title:</label>
+                    </div>
+                    <input type="text" name="title" placeholder="Task title" required class="create__form__field create__form__input create__form__input--title">
+                </div>
+                <div class="create__form__group">
+                    <div class="create__form__container__label">
+                        <label for="description" class="create__form__label">Description:</label>
+                    </div>
+                    <textarea name="description" placeholder="Task description" required cols="30" rows="10" class="create__form__field create__form__textarea create__form__textarea--description"></textarea>
+                </div>
+                <div class="create__form__group">
+                    <div class="create__form__container__label">
+                        <label for="type" class="create__form__label">Type:</label>
+                    </div>
+                    <select name="type" id="" required class="create__form__field create__form__input create__form__input--select">
+                        <option value="general" class="create__form__option">General</option>
+                        <option value="ui-design" class="create__form__option">UI Design</option>
+                        <option value="ux-design" class="create__form__option">UX Design</option>
+                        <option value="frontend" class="create__form__option">Frontend</option>
+                        <option value="backend" class="create__form__option">Backend</option>
+                        <option value="graphic-design" class="create__form__option">Graphic Design</option>
+                        <option value="copywriting" class="create__form__option">Copywriting</option>
+                    </select>
+                </div>
+                <div class="create__form__group">
+                    <div class="create__form__container__label">
+                        <label for="date" class="create__form__label">Due date:</label>
+                    </div>
+                    <input type="date" name="date" required class="create__form__field create__form__input create__form__input--date">
+                </div>
+                <button class="create__form__btn" type="submit">Upload task</button>
+            </form>
+        </section>
+        <section class="progress">
+            <h2 class="big__title">Your progress</h2>
+            <div class="progress__container__list">
+            </div>
+        </section>
+        <section class="tasks">
+            <h2 class="big__title">Tasks</h2>
+            <div class="tasks__deco__container">
+                <div class="tasks__deco"></div>
+            </div>
+            <div class="tasks__filters">
+                <div class="tasks__filters__main">
+                    <button class="tasks__button tasks__button--all tasks__button--active">All Tasks</button>
+                    <button class="tasks__button tasks__button--finished">Finished</button>
+                </div>
+                <form action="#" class="tasks__filters__secondary">
+                    <div class="tasks__filters__secondary__group">
+                        <label for="type" required class="tasks__filters__secondary__label">Type</label>
+                        <select name="type" id="" required class="tasks__filters__secondary__select tasks__filters__secondary__select--category">
+                            <option value="all" class="create__form__option">All</option>
+                            <option value="general">General</option>
+                            <option value="ui-design">UI Design</option>
+                            <option value="ux-design">UX Design</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="graphic-design">Graphic Design</option>
+                            <option value="copywriting">Copywriting</option>
+                        </select>
+                    </div>
+                    <div class="tasks__filters__secondary__group">
+                        <label for="sort" class="tasks__filters__secondary__label">Sort</label>
+                        <select name="sort" id="" class="tasks__filters__secondary__select tasks__filters__secondary__select--sort">
+                            <option value="no-sort">No sorting</option>
+                            <option value="ascending">Date &uarr;</option>
+                            <option value="descending">Date &darr;</option>
+                        </select>
+                    </div>
+                    <button class="tasks__filters__secondary__btn">Go</button>
+                </form>
+            </div>
+            <div class="tasks__container__grid">
+                <div class="container__message">
+                    <span class="message">You have no tasks yet</span>
+                </div>
+            </div>
+            <div class="tasks__pagination">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

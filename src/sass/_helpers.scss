@@ -1,0 +1,50 @@
+section {
+    padding: 2rem;
+}
+
+.big__title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.margin--bottom {
+    margin-bottom: 2.2rem !important;
+}
+
+.message {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.notification {
+    position: fixed;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    background-color: $green;
+    z-index: 999;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: 389px){
+        width: 30rem;
+    }
+
+    &--active {
+        transform: translate(-50%, 0%);
+    }
+
+    &__message {
+        font-size: 2rem;
+
+        @media only screen and (max-width: 670px){
+            font-size: 1.6rem;
+        }
+    }
+}

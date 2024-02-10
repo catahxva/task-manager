@@ -1,0 +1,106 @@
+.create {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @media only screen and (max-width: 830px){
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        @media only screen and (max-width: 670px){
+            gap: 3rem;
+        }
+    
+        &__group {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &__container__label {
+            width: 15rem;
+            padding: 1rem 0rem;
+
+            @media only screen and (max-width: 830px){
+                width: 12rem
+            }
+
+            @media only screen and (max-width: 670px){
+                width: 16rem;
+            }
+        }
+
+        &__label {
+            font-family: inherit;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $black;
+
+            @media only screen and (max-width: 830px){
+                font-size: 1.6rem;
+            }
+
+            @media only screen and (max-width: 670px){
+                font-size: 1.8rem;
+            }
+        }
+
+        &__field {
+            width: calc(100% - 15rem);
+            padding: 1rem 1.4rem;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+            font-family: inherit;
+            font-size: 1.8rem;
+            transition: all 0.5s; 
+            cursor: pointer;
+
+            @media only screen and (max-width: 830px){
+                width: calc(100% - 12rem);
+            }
+
+            @media only screen and (max-width: 670px){
+                width: calc(100% - 16rem);
+            }
+        }
+
+        &__input {
+            display: block;
+
+            &:focus{
+                outline: none;
+                border: 1px solid $blue;
+            }
+        }
+
+        &__textarea {
+            display: block;
+            resize: none;
+            height: 10rem;
+
+            &:focus{
+                outline: none;
+                border: 1px solid $blue;
+            }
+        }
+
+        &__btn {
+            font-family: inherit;
+            font-size: 2rem;
+            color: $white;
+            background-color: $blue;
+            padding: 1rem 1.4rem;
+            border: none;
+            border-radius: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
